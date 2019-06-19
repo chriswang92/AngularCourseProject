@@ -8,9 +8,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent {
     @Output() elementClicked = new EventEmitter<string>();
     collapsed = true;
-    onClickRecipes() {
+    onClickElement(element: string) {
         console.log('on click recipes')
-        this.elementClicked.emit("recipesClicked");
+        this.elementClicked.emit(element);
     }
     onClickShoppingList() {
         console.log('on click shoppinglist')

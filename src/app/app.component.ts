@@ -11,17 +11,19 @@ export class AppComponent {
   shoppinglistClicked = false;
   elementClicked = 'recipes';
   onClickedElement(elementClicked: string) {
-    console.log('received emitted click: some element clicked')
-    if (elementClicked === 'recipesClicked') {
-      console.log('received emitted click: recipeClicked')
-      this.elementClicked = 'recipes';
-    }
 
-    else if (elementClicked === 'shoppinglistClicked') {
+    this.elementClicked = elementClicked;
+    // console.log('received emitted click: some element clicked')
+    // if (elementClicked === 'recipesClicked') {
+    //   console.log('received emitted click: recipeClicked')
+    //   this.elementClicked = 'recipes';
+    // }
 
-      console.log('received emitted click: shoppinglistClicked')
-      this.elementClicked = 'shopping-list';
-    }
+    // else if (elementClicked === 'shoppinglistClicked') {
+
+    //   console.log('received emitted click: shoppinglistClicked')
+    //   this.elementClicked = 'shopping-list';
+    // }
   }
   onClickedRecipes(elementClicked: string) {
 
