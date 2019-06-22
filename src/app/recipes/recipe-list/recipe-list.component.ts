@@ -19,5 +19,12 @@ export class RecipeListComponent implements OnInit {
 
   ngOnInit() {
   }
+  recipeToDisplay: Recipe;
 
+  onRecipeEmitted(recipe: Recipe) {
+    // this.recipes.push(recipe);
+    console.log('onRecipeEmitted reached..name: ' + recipe.name);
+    this.recipeToDisplay = recipe;
+    console.log('recipeToDisplay setted up, name: ' + this.recipeToDisplay.name);
+  }
 }
