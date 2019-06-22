@@ -7,23 +7,17 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  // ngOnInit(): void {
-  //   throw new Error("Method not implemented.");
-  // }
 
   @Input() recipeItem: Recipe;
-  @Output() recipeItemClicked = new EventEmitter<Recipe>();
-    // name: string,
-    // description: string,
-    // imagePath: string}>();
+  @Output() recipeItemSelected = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClickRecipeItem(recipeItem: Recipe) {
-    console.log('onClickRecipeItem clicked, item: ' + recipeItem.description);
-    this.recipeItemClicked.emit(recipeItem);
+  onSelectedRecipeItem() {
+    console.log('onClickRecipeItem clicked');
+    this.recipeItemSelected.emit();
   }
 }
