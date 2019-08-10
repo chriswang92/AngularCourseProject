@@ -17,4 +17,12 @@ export class ShoppingListService {
         this.ingredientsChanged.emit(this.ingredients.slice());
         console.log('after add size='+this.ingredients.length);
     }
+
+    addIngredients(ingredients: Ingredient[]) {
+        // for (let ingredient of ingredients) {
+        //     this.addIngredient(ingredient);
+        // }
+        this.ingredients.push(...ingredients); // ES6 spread operator: '...' makes an array to a list
+        this.ingredientsChanged.emit(this.ingredients.slice());
+    }
 }
